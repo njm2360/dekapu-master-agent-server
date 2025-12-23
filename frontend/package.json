@@ -1,0 +1,16 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --minify --outfile=dist/app.js",
+    "dev": "esbuild src/main.js --bundle --sourcemap --outfile=dist/app.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.2"
+  }
+}
