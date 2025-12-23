@@ -1,7 +1,7 @@
 import re
 import socket
-from app.model.launch_option import LaunchOptions
-from app.service.websocket_service import WebSocketService
+from model.launch_option import LaunchOptions
+from service.websocket_service import WebSocketService
 
 
 class ControlService:

@@ -1,17 +1,17 @@
 from dataclasses import dataclass
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from contextlib import asynccontextmanager
 
-from fastapi.staticfiles import StaticFiles
-from app.api.vrchat_api import VRChatAPI
-from app.config import Config
-from app.service.control_service import ControlService
-from app.service.vrchat.group_service import GroupService
-from app.service.vrchat.instance_service import InstanceService
-from app.service.websocket_service import WebSocketService
-from app.router.router import api_router
-from app.util.auth import AuthManager
-from app.util.http import HttpClient
+from config import Config
+from api.vrchat_api import VRChatAPI
+from service.control_service import ControlService
+from service.vrchat.group_service import GroupService
+from service.vrchat.instance_service import InstanceService
+from service.websocket_service import WebSocketService
+from router.router import api_router
+from util.auth import AuthManager
+from util.http import HttpClient
 
 
 @dataclass
@@ -54,6 +54,6 @@ app = FastAPI(lifespan=lifespan)
 app.include_router(api_router)
 app.mount(
     "/",
-    StaticFiles(directory="web", html=True),
+    StaticFiles(directory="../../frontend/dist", html=True),
     name="web",
 )

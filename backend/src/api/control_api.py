@@ -1,9 +1,9 @@
 from typing import List
 from fastapi import APIRouter, Depends, Request
-from app.presentation.model.client import ClientInfoResponse
-from app.model.launch_option import LaunchOptions
-from app.presentation.model.wol_option import WolOption
-from app.service.control_service import ControlService
+from presentation.model.client import ClientInfoResponse
+from model.launch_option import LaunchOptions
+from presentation.model.wol_option import WolOption
+from service.control_service import ControlService
 
 
 def get_ctrl_service(request: Request) -> ControlService:

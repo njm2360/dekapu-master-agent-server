@@ -1,7 +1,8 @@
 from typing import Optional, List
 from pydantic import BaseModel, ConfigDict, Field
-from app.model.instance import InstanceInfo
-from app.model.osc import OscConfig
+
+from model.osc import OscConfig
+from model.instance import InstanceInfo
 
 
 class LaunchOptions(BaseModel):
@@ -12,12 +13,13 @@ class LaunchOptions(BaseModel):
     midi: Optional[str] = Field(None, alias="midi")
     osc: Optional[OscConfig] = Field(None, alias="osc")
     affinity: Optional[str] = Field(None, alias="affinity")
-    process_priority: Optional[str] = Field(None, alias="processPriority")
+    process_priority: Optional[int] = Field(None, alias="processPriority")
+    main_thread_priority: Optional[int] = Field(None, alias="mainThreadPriority")
     watch_worlds: bool = Field(False, alias="watchWorlds")
     watch_avatars: bool = Field(False, alias="watchAvatars")
     debug_gui: bool = Field(False, alias="debugGui")
     sdk_log_levels: bool = Field(False, alias="sdkLogLevels")
     udon_debug_logging: bool = Field(False, alias="udonDebugLogging")
-    extra_args: Optional[List[str]] = Field(None, alias="extraArgs")
+    extra_args: Optional[str] = Field(None, alias="extraArgs")
 
     model_config = ConfigDict(populate_by_name=True)

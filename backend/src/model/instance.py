@@ -1,11 +1,10 @@
-from datetime import datetime
 from enum import StrEnum
 from typing import Optional
-
+from datetime import datetime
 from pydantic import BaseModel, Field
 
-from app.model.group import GroupAccessType
-from app.model.world import WorldInfo
+from model.world import WorldInfo
+from model.group import GroupAccessType
 
 
 class InstanceType(StrEnum):

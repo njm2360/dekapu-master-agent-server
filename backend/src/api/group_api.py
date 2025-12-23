@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, Request
-from app.model.group import GroupInstance, GroupRole
-from app.service.vrchat.group_service import GroupService
+from model.group import GroupInstance, GroupRole
+from service.vrchat.group_service import GroupService
 
 
 def get_group_service(request: Request) -> GroupService:

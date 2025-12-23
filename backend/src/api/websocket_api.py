@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, WebSocket, WebSocketDisconnect
 from pydantic import ValidationError
 
-from app.model.client import ClientMeta
-from app.presentation.model.client import ClientInfo
-from app.service.websocket_service import WebSocketService
+from model.client import ClientMeta
+from presentation.model.client import ClientInfo
+from service.websocket_service import WebSocketService
 
 
 router = APIRouter(prefix="/api")

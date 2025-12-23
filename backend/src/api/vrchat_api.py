@@ -1,14 +1,12 @@
 import json
 import logging
-from typing import Final, Optional
 import requests
+from typing import Final, Optional
 
-from app.config import Config
-from app.model.group import GroupInstance, GroupPostInfo, GroupRole
-from app.model.instance import CreateInstanceConfig
-from app.util.http import HttpClient
-from app.util.auth import AuthManager
-from app.model.instance import InstanceInfo
+from model.instance import InstanceInfo, CreateInstanceConfig
+from model.group import GroupInstance, GroupPostInfo, GroupRole
+from util.http import HttpClient
+from util.auth import AuthManager
 
 
 class VRChatAPI:

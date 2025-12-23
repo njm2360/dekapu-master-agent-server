@@ -1,5 +1,5 @@
-from app.api.vrchat_api import VRChatAPI
-from app.model.instance import CreateInstanceConfig, InstanceInfo
+from api.vrchat_api import VRChatAPI
+from model.instance import CreateInstanceConfig, InstanceInfo
 
 
 class InstanceService:
@@ -9,9 +9,7 @@ class InstanceService:
     ):
         self.api = api
 
-    def create_instance(
-        self, config: CreateInstanceConfig
-    ) -> InstanceInfo | None:
+    def create_instance(self, config: CreateInstanceConfig) -> InstanceInfo | None:
         try:
             instance = self.api.create_instance(config)
         except Exception:

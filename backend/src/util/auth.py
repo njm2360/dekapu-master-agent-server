@@ -4,10 +4,10 @@ import requests
 from typing import Final
 from requests.auth import HTTPBasicAuth
 
-from app.config import Config
-from app.util.http import HttpClient
-from app.model.vrchat import AuthVerifyResponse
-from app.service.json_cookie_repo import JsonCookieRepo
+from config import Config
+from util.http import HttpClient
+from model.vrchat import AuthVerifyResponse
+from service.json_cookie_repo import JsonCookieRepo
 
 
 class AuthError(Exception):

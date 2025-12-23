@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, Request
-from app.model.instance import CreateInstanceConfig, InstanceInfo
-from app.service.vrchat.instance_service import InstanceService
+
+from model.instance import CreateInstanceConfig, InstanceInfo
+from service.vrchat.instance_service import InstanceService
 
 
 def get_instance_service(request: Request) -> InstanceService:

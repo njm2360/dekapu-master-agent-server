@@ -1,8 +1,8 @@
-from datetime import datetime
 from enum import Enum
-from pydantic import BaseModel
-from typing import Optional
 from pydantic import Field
+from typing import Optional
+from datetime import datetime
+from pydantic import BaseModel
 
 
 class ReleaseStatus(Enum):

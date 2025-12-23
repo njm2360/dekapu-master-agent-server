@@ -3,7 +3,7 @@ from fastapi import WebSocket
 from dataclasses import dataclass
 from fastapi.encoders import jsonable_encoder
 
-from app.model.client import ClientMeta, ClientMetaWithId
+from model.client import ClientMeta, ClientMetaWithId
 
 
 @dataclass

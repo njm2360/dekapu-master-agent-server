@@ -1,4 +1,4 @@
-from app.api.vrchat_api import VRChatAPI
+from api.vrchat_api import VRChatAPI
 
 
 class GroupService:
