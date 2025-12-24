@@ -1,0 +1,7 @@
+export default {
+    // root: resolve(__dirname, 'src'),
+    build: {
+        outDir: './dist',
+        emptyOutDir: true
+    }
+}

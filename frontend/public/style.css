@@ -10,3 +10,9 @@ h1 {
 .table th {
   white-space: nowrap;
 }
+
+#leftRoleList,
+#rightRoleList {
+  height: 150px;
+  overflow-y: auto;
+}
